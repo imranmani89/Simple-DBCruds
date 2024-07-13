@@ -1,8 +1,4 @@
 ﻿using DBCrudApp.Repositories;
-using System.Data;
-using System.Data.Common;
-using System.Data.SqlClient;
-
 namespace DBCrudApp;
 
 
@@ -10,6 +6,9 @@ public static class Program
 {
     public static void Main(string[] args)
     {
+        //Add ANother table of PersonAttendance With Columns {Id, PersonId, AttendanceDateTime, IsActive}
+        //write CreateAttendance and GetData functions
+        //Make sure these work properly
 
         var list = PersonRepository.GetData();
 
@@ -17,8 +16,5 @@ public static class Program
         {
             Console.WriteLine($"{item.Id}\t|\t{item.FirstName} {item.LastName}\t|\t{item.Email}\t|\t{item.CNIC}\t|\t{item.DOB.ToString("dd-MMM-yyyy")}\t|\t ");
         }
-
     }
-
-
 }

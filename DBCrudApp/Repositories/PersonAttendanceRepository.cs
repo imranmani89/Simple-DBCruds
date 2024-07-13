@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DBCrudApp.Repositories
 {
-    public static class PersonRepository
+    public static class PersonAttendance
     {
         //Change the connectionString as per your Database
         public static string _connectionString { get; set; } = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=TestDB;Integrated Security=True;";
@@ -17,7 +17,7 @@ namespace DBCrudApp.Repositories
 
         public static List<Person> GetData()
         {
-            string commandString = "Select * FROM TestDB.dbo.Person;";
+            string commandString = "Select * FROM TestDB.dbo.A;";
 
             var connection = new SqlConnection(_connectionString);
             var command = new SqlCommand(commandString, connection);
@@ -51,23 +51,12 @@ namespace DBCrudApp.Repositories
         }
 
 
-        public static bool CreatePerson(Person person)
+        public static bool CreatePersonAttendance(Person person)
         {
             //right your code here
             return false;
         }
 
-        public static bool UpdatePerson(Person person)
-        {
-            //Right your code here
-            return false;
-        }
-
-        public static bool DeletePerson(int id)
-        {
-            //Right your code here
-            return false;
-        }
 
     }
 }
