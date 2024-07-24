@@ -1,4 +1,5 @@
-﻿using DBCrudApp.Repositories;
+﻿using DBCrudApp.Models;
+
 namespace DBCrudApp;
 
 
@@ -10,11 +11,12 @@ public static class Program
         //write CreateAttendance and GetData functions
         //Make sure these work properly
 
-        var list = PersonRepository.GetData();
+        Person P = new Person(1, "Imran", "Imtiaz", "imran@imran,com", 
+            "sdfsdfgdfgsdg", "35202-12345678-5", "0123453354", "Senior Employee"
+            ,DateTime.Parse("1989-07-06"), 1 );
 
-        foreach (var item in list)
-        {
-            Console.WriteLine($"{item.Id}\t|\t{item.FirstName} {item.LastName}\t|\t{item.Email}\t|\t{item.CNIC}\t|\t{item.DOB.ToString("dd-MMM-yyyy")}\t|\t ");
-        }
+        Console.WriteLine($"Person id is {P.Id}  {P.FirstName}  {P.LastName}  {P.Address} {P.RegistrationDate.ToString()} ");
+        Console.WriteLine(P.DayOfDOB());
+        Console.ReadKey();
     }
 }

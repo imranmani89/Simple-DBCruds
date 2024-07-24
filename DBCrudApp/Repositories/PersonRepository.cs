@@ -69,5 +69,13 @@ namespace DBCrudApp.Repositories
             return false;
         }
 
+        //public static void DisplayData(List<Person> persons )
+        //{
+        //    foreach (var item in persons)
+        //    {
+        //        Console.WriteLine($"{}");
+        //    }
+        //}
+
     }
 }
